@@ -9,17 +9,23 @@ import CustomButton from '@/components/CustomButton'
 const Home = () => {
    return (
       <SafeAreaView >
-         {/* this is a way */}
-         <CustomButton color='primary' onPress={() => router.push('/products')}>
-            this is the button
-         </CustomButton>
 
          {/* this is another way */}
-         <Link className='mt-5' href='/products' asChild>
+         <Link className='mb-10' href='/products' asChild>
             <CustomButton color='primary'>
                this is the button with Link tag
             </CustomButton>
          </Link>
+
+         {/* this is a way */}
+         <CustomButton className='mb-10' color='primary' onPress={() => router.push('/products')}>
+            this is the button
+         </CustomButton>
+
+         <CustomButton className='mb-10' color='primary' variant='text-only' onPress={() => router.push('/products')}>
+            this is the button
+         </CustomButton>
+
 
          {/* <View className='px-10'>
             <Link className='mb-5' href='/profile'>Profile</Link>
